@@ -7,7 +7,6 @@ class OrderCommissionGenerator
 				order = Order.find_by(id: order.id)
 				commissions = []
 				commission = CommissionCalculator.new(order).calculate
-				debugger
 				order_commission = OrderCommission.create(commission)
 				commissions << order_commission
 			else
