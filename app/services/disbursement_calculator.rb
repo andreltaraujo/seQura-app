@@ -9,7 +9,6 @@ class DisbursementCalculator
 	end
 	
 	def order_fee_amount
-		debugger
 		@order_commissions_for_disbursements.sum(&:sequra_amount)
 	end
 

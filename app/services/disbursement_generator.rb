@@ -5,7 +5,6 @@ class DisbursementGenerator
 		merchants_to_process.each do |merchant|
 			dates = DisbursementGenerator.weekly_disbursements_dates(merchant)
 			orders_to_process = DisbursementGenerator.fetch_orders_weekly(merchant, dates)
-			debugger
 			if orders_to_process.any?
 				generated_commissions = OrderCommissionGenerator.new.execute(orders_to_process)
 				if generated_commissions.present?
