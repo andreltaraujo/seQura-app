@@ -12,7 +12,7 @@ module Commissions
 				Rails.logger.info("[Commissions::CommissionsTask] - Merchant reference: #{merchant_reference}")
 				count = 0
 				Order.joins(:merchant).where("merchant_reference = ?", merchant_reference).find_each do |order| 
-					OrderCommissionGeneratorWorker.perform_async(order.id)
+					OrderCommissionGeneratorWorker.perform_async(order)
 					count += 1
 				end
 				Rails.logger.info("[Commissions::CommissionsTask] - #{count} registers for #{merchant_reference} to be processed")
