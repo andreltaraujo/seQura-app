@@ -65,3 +65,9 @@
 	Wee did not implement the calculation of minimum monthlyt amount fee due of time.
 	Commissions Task and Disbursement Task was used to calculated the CSV file data the result as follow:
 
+| YEAR | Number of disbursements | Amount disbursed to merchants	| Amount of order fees | Number of monthly fees charged | Amount of monthly fee charged |
+|------|-------------------------|--------------------------------|----------------------|--------------------------------|-------------------------------|
+| 2022 |          1283           |       €11.596.211,27           |   €106.906,63        |                                |                               |
+| 2023 |           881           |        €9.049.910,27           |    €83.185,32        |                                |                               |
+|------|-------------------------|--------------------------------|----------------------|--------------------------------|-------------------------------|
+

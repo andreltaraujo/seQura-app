@@ -41,7 +41,6 @@ class DisbursementGenerator
 			week_dates = week_disbursements_dates(weekly_merchant)
 			week_orders_to_process = fetch_week_orders(weekly_merchant, week_dates)
 			if week_orders_to_process.any?
-				debugger
 				generated_week_commissions = OrderCommissionGenerator.new.execute(week_orders_to_process)
 				if generated_week_commissions.present?
 					calculated_week_disbursement = DisbursementCalculator.new(generated_week_commissions).calculate
